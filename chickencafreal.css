@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fffaf0;
+  color: #333;
+}
+
+/* Glowing Header Banner */
+.glow-banner {
+  background: url('/image/Chicken-Cafreal-Square-2.jpg') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.glow-banner .overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 200px;
+  color: #fff;
+  box-shadow: 0 0 20px #ffa500, 0 0 40px #ff8c00;
+}
+
+.glow-banner h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.glow-banner p {
+  font-size: 1.2em;
+}
+
+/* Grid Intro Section */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px 30px;
+  align-items: center;
+  background: #fff3e6;
+}
+
+.intro-text h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #d35400;
+}
+
+.intro-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.intro-img img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Food Cards */
+.food-gallery {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fffaf5;
+}
+
+.food-gallery h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #b34700;
+  text-shadow: 0 0 10px #ffc107;
+}
+
+.food-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.food-card {
+  padding: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 400% 400%;
+  animation: rainbowGlow 8s ease infinite;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  font-family: 'Poppins', sans-serif;
+  margin: 2rem auto;
+  max-width: 400px;
+}
+
+@keyframes rainbowGlow {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 20px red;
+  }
+  25% {
+    background-position: 50% 50%;
+    box-shadow: 0 0 20px orange;
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0 0 20px green;
+  }
+  75% {
+    background-position: 50% 50%;
+    box-shadow: 0 0 20px blue;
+  }
+  100% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 20px violet;
+  }
+}
+
+.food-card img {
+  width: 40%;
+  border-radius: 200px;
+  margin-bottom: 10px;
+}
+
+.food-card h3 {
+  font-size: 1.1em;
+  color: #e65100;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background-color: #ff704d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #fffacd;
+  text-decoration: underline;
+}
+.dynamic-nav {
+  height: 100px; 
+  width: 100%;
+  padding: 1rem 0;
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fbc2eb);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.dynamic-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+align-items: flex-end;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 0;
+}
+
+.dynamic-nav ul li a {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dynamic-nav ul li a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dynamic-nav ul li a::before {
+  content: "";
+  position: relative;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.15);
+  z-index: 0;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+}
+
+.dynamic-nav ul li a:hover::before {
+  background: rgba(255, 255, 255, 0.3);
+}
